@@ -7,11 +7,17 @@ const MonthContainer = styled.div`
 `;
 
 const Month = () => {
-  const currentMonth = new Date().toLocaleString('default', { month: 'long' });
+  const date: Date = new Date();
+  const currentMonth: string = date.toLocaleString('default', {
+    month: 'long',
+  });
+  const currentYear: number = date.getFullYear();
 
   return (
     <MonthContainer>
-      <span>{currentMonth}</span>
+      <span>
+        {currentMonth} {currentYear}
+      </span>
     </MonthContainer>
   );
 };

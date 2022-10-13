@@ -14,7 +14,8 @@ const DatesContainer = styled.div<{ firstDay: number }>`
     &.selected {
       background-color: red;
       color: white;
-      width: 50%;
+      width: 20px;
+      padding: 5px;
     }
   }
 `;
@@ -22,11 +23,12 @@ const DatesContainer = styled.div<{ firstDay: number }>`
 interface IDate {
   currentDate: number;
   firstDay: number;
+  daysInTheCurrentMonth: number;
 }
 
-const DateA = ({ currentDate, firstDay }: IDate) => {
+const DateA = ({ currentDate, firstDay, daysInTheCurrentMonth }: IDate) => {
   let daysArray = [];
-  for (let i = 0; i <= 30; i++) {
+  for (let i = 0; i < daysInTheCurrentMonth; i++) {
     daysArray[i] = <>{i + 1}</>;
   }
 

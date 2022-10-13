@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Calendar React App using CSS Grids
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Playing around with React/CSS Grids using Typescript; a calendar app with React using CSS Grids.
 
 ## Available Scripts
 

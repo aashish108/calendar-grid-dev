@@ -8,7 +8,7 @@ const DatesContainer = styled.div<{ firstDay: number }>`
   width: 100%;
   span {
     color: black;
-    &: first-child {
+    &: first-of-type {
       grid-column: ${(props) => props.firstDay};
     }
     &.selected {

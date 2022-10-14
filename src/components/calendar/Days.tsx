@@ -14,8 +14,8 @@ const Days = () => {
 
   return (
     <DaysContainer>
-      {days.map((day) => (
-        <Day>{day}</Day>
+      {days.map((day, key) => (
+        <Day key={key}>{day}</Day>
       ))}
     </DaysContainer>
   );

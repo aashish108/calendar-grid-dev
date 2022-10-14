@@ -18,3 +18,8 @@ test('the correct month/year is shown', async () => {
     'September 2022'
   );
 });
+
+test('the correct month/year is shown again', async () => {
+  render(<Calendar rawDate='2020-5-10' />);
+  expect(screen.getByTestId('monthContainer')).toHaveTextContent('May 2020');
+});

@@ -6,17 +6,16 @@ const MonthContainer = styled.div`
   text-align: center;
 `;
 
-const Month = () => {
-  const date: Date = new Date();
-  const currentMonth: string = date.toLocaleString('default', {
-    month: 'long',
-  });
-  const currentYear: number = date.getFullYear();
+interface IMonth {
+  month: string;
+  year: number;
+}
 
+const Month = ({ month, year }: IMonth) => {
   return (
     <MonthContainer>
       <span>
-        {currentMonth} {currentYear}
+        {month} {year}
       </span>
     </MonthContainer>
   );

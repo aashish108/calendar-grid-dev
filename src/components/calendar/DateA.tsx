@@ -21,12 +21,12 @@ const DatesContainer = styled.div<{ firstDay: number }>`
 `;
 
 interface IDate {
-  currentDate: number;
+  selectedDate: number;
   firstDay: number;
   daysInTheCurrentMonth: number;
 }
 
-const DateA = ({ currentDate, firstDay, daysInTheCurrentMonth }: IDate) => {
+const DateA = ({ selectedDate, firstDay, daysInTheCurrentMonth }: IDate) => {
   let daysArray = [];
   for (let i = 0; i < daysInTheCurrentMonth; i++) {
     daysArray[i] = <>{i + 1}</>;
@@ -37,7 +37,7 @@ const DateA = ({ currentDate, firstDay, daysInTheCurrentMonth }: IDate) => {
       {daysArray.map((day, key) => (
         <span
           key={key}
-          className={key === currentDate - 1 ? 'selected' : 'notSelected'}
+          className={key === selectedDate - 1 ? 'selected' : 'notSelected'}
         >
           {day}
         </span>

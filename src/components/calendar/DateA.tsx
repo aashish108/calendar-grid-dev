@@ -37,7 +37,8 @@ const DateA = ({ selectedDate, firstDay, daysInTheCurrentMonth }: IDate) => {
       {daysArray.map((day, key) => (
         <span
           key={key}
-          className={key === selectedDate - 1 ? 'selected' : 'notSelected'}
+          className={key === selectedDate - 1 ? 'selected' : ''}
+          data-testid={key === selectedDate - 1 ? 'selectedDate' : ''}
         >
           {day}
         </span>

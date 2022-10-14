@@ -14,7 +14,7 @@ interface IMonth {
 const Month = ({ month, year }: IMonth) => {
   return (
     <MonthContainer>
-      <span>
+      <span data-testid='monthContainer'>
         {month} {year}
       </span>
     </MonthContainer>
